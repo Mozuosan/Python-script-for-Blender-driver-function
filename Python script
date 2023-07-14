@@ -1,0 +1,13 @@
+import bpy
+import math
+
+def driverFunc(frame):
+    
+    if frame >= 66 and frame <= 95:
+        return (frame - 66) * -0.4
+    elif frame >= 96 and frame <= 165:
+        return (frame - 96) * -0.8
+    else:
+        return 0
+    
+bpy.app.driver_namespace['driverFunc'] = driverFunc
